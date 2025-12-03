@@ -1,0 +1,23 @@
+open_command: coinshop
+menu_title: 'Coin shop'
+size: 27
+
+items:
+  buy_10k_claimbox:
+    material: GOLD_BLOCK
+    slot: 0
+    display_name: '&eBuy 10K claimbocks'
+    lore:
+      - '&7Price: &a$1000'
+    left_click_requirements:
+      requirements:
+        has_money:
+          type: has money
+          amount: 1000
+      deny_commands:
+      - '[message] &cYou don''t have enough money for this!'
+
+    left_click_commands:
+      - '[player] buy10kclaimblocks'
+      - '[close]'
+      - '[message] You succesfully bought 10K claimblocks'
